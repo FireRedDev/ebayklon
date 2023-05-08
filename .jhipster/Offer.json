@@ -1,0 +1,27 @@
+{
+  "applications": "*",
+  "changelogDate": "20230508160914",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "offer",
+  "fields": [
+    {
+      "fieldName": "offerValue",
+      "fieldType": "Double"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Offer",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "auction",
+      "otherEntityRelationshipName": "auctionName",
+      "relationshipName": "offerName",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

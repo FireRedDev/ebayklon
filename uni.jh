@@ -1,10 +1,8 @@
 entity Auction {
-	auctionName String,
     auctionDescription String
 }
 
 entity Offer {
-	offerName String,
     offerValue Double
 }
 
