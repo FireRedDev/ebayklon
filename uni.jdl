@@ -1,0 +1,13 @@
+entity Auction {
+	auctionName String,
+    auctionDescription String
+}
+
+entity Offer {
+	offerName String,
+    offerValue Double
+}
+
+relationship OneToMany {
+	Auction{auctionName} to Offer{offerName}
+}

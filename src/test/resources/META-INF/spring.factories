@@ -1,0 +1,1 @@
+org.springframework.test.context.ContextCustomizerFactory = at.jku.config.TestContainersSpringContextCustomizerFactory
