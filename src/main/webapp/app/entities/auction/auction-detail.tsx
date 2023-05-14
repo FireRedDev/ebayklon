@@ -32,6 +32,33 @@ export const AuctionDetail = () => {
             <span id="auctionDescription">Auction Description</span>
           </dt>
           <dd>{auctionEntity.auctionDescription}</dd>
+          <dt>
+            <span id="auctionDescription">Offers</span>
+          </dt>
+          {auctionEntity.auctionNames && auctionEntity.auctionNames.length > 0 ? (
+            <dd>
+              {auctionEntity.auctionNames.map((offer, i) => (
+                <tr key={`entity-${i}`} data-cy="entityTable">
+                  <td>
+                    <Button tag={Link} to={`/offer/${offer.id}`} color="link" size="sm">
+                      {offer.id}
+                    </Button>
+                  </td>
+                  <td>{offer.offerValue}</td>
+                  <td>{offer.offerName ? <Link to={`/auction/${offer.offerName.id}`}>{offer.offerName.id}</Link> : ''}</td>
+                  <td className="text-end">
+                    <div className="btn-group flex-btn-group-container">
+                      <Button tag={Link} to={`/offer/${offer.id}`} color="info" size="sm" data-cy="entityDetailsButton">
+                        <FontAwesomeIcon icon="eye" /> <span className="d-none d-md-inline">Details</span>
+                      </Button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </dd>
+          ) : (
+            <div className="alert alert-warning">Keine Offers gefunden</div>
+          )}
         </dl>
         <Button tag={Link} to="/auction" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" /> <span className="d-none d-md-inline">Zurück</span>

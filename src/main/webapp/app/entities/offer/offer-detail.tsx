@@ -32,7 +32,7 @@ export const OfferDetail = () => {
             <span id="offerValue">Offer Value</span>
           </dt>
           <dd>{offerEntity.offerValue}</dd>
-          <dt>Offer Name</dt>
+          <dt>Auction</dt>
           <dd>{offerEntity.offerName ? offerEntity.offerName.id : ''}</dd>
         </dl>
         <Button tag={Link} to="/offer" replace color="info" data-cy="entityDetailsBackButton">

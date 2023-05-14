@@ -48,7 +48,7 @@ export const Offer = () => {
               <tr>
                 <th>ID</th>
                 <th>Offer Value</th>
-                <th>Offer Name</th>
+                <th>Auction of Offer</th>
                 <th />
               </tr>
             </thead>
